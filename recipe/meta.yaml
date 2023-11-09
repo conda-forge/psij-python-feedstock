@@ -25,6 +25,7 @@ requirements:
     - pystache >=0.6.0
     - typeguard >=2.12,<3.dev0
     - pystache >=0.6.0
+    - typing-compat
 
 test:
   imports:
