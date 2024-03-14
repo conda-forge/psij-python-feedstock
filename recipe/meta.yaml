@@ -1,5 +1,5 @@
 {% set name = "psij-python" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/psij-python-{{ version }}.tar.gz
-  sha256: 5779c82c1d041fc7487fd589bf2e15f3b314c294ae11b06ce3d2f44b03267af3
+  sha256: 063ee36d7450d50a977fb30a59180f7103423f4f49ef7ce3373b2031ace097cb
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
   run:
     - python >=3.7
     - filelock >=3.4,<4.dev0
+    - packaging >=24.0,<25.dev0
     - psutil >=5.9,<6.dev0
     - pystache >=0.6.0
     - typeguard >=2.12,<3.dev0
