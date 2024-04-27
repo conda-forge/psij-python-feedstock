@@ -6,8 +6,9 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/psij-python-{{ version }}.tar.gz
-  sha256: 063ee36d7450d50a977fb30a59180f7103423f4f49ef7ce3373b2031ace097cb
+  # switch to GitHub source until https://github.com/ExaWorks/psij-python/issues/466 is addressed
+  url: https://github.com/ExaWorks/psij-python/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 734044f6bc5377b4e30aec1aed1f2a5ec0ff3f3e334d24a97b3d3cc3c9646f98
 
 build:
   noarch: python
