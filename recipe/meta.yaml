@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
@@ -24,7 +24,6 @@ requirements:
     - psutil >=5.9,<6.dev0
     - pystache >=0.6.0
     - typeguard >=2.12,<3.dev0
-    - pystache >=0.6.0
     - typing-compat
 
 test:
@@ -37,9 +36,11 @@ test:
 
 about:
   home: https://github.com/exaworks/psij-python
-  summary: This is an implementation of the PSI/J (Portable Submission Interface for Jobs)         specification.
+  summary: This is an implementation of the PSI/J (Portable Submission Interface for Jobs) specification.
   license: MIT
   license_file: LICENSE
+  dev_url: https://github.com/exaworks/psij-python
+  doc_url: https://exaworks.org/psij-python/#docs
 
 extra:
   recipe-maintainers:
