@@ -1,5 +1,5 @@
 {% set name = "psij-python" %}
-{% set version = "0.9.5" %}
+{% set version = "0.9.6" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   # switch to GitHub source until https://github.com/ExaWorks/psij-python/issues/466 is addressed
   url: https://github.com/ExaWorks/psij-python/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 05ddd8edd736230fc5fd4019976e36c6e654554c7843eda748e92730df6ac3a2
+  sha256: 9740b916bccbd89600c6949c3875bc6c8a6efc1f23c07ee69ab6b4801aca3be6
 
 build:
   noarch: python
