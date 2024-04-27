@@ -1,5 +1,5 @@
 {% set name = "psij-python" %}
-{% set version = "0.9.1" %}
+{% set version = "0.9.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/psij-python-{{ version }}.tar.gz
-  sha256: 336455634af2fdb34bbb77dceebbb384833bedffef68c3d36eb25a4dcfc1b104
+  sha256: a037bde868d9e3dd6d02f21593148694f6ddb5a6b53cf8ec558418cb51b958d2
 
 build:
   noarch: python
