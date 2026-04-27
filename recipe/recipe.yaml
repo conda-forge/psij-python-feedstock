@@ -1,0 +1,52 @@
+schema_version: 1
+
+context:
+  name: psij-python
+  version: "0.9.11"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
+  sha256: de069062d96e6a75a646594cecac67dfa090ab9a0f13a112c0efb97526286e37
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - filelock >=3.4,<4.dev0
+    - packaging >=24.0,<=25.0
+    - psutil >=5.9,<=7.0.0
+    - pystache >=0.6.0
+    - typeguard >=3.0.1
+    - typing-compat
+
+tests:
+  - python:
+      imports:
+        - psij
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: This is an implementation of the PSI/J (Portable Submission Interface for Jobs) specification.
+  license: MIT
+  license_file: LICENSE
+  homepage: https://github.com/exaworks/psij-python
+  repository: https://github.com/exaworks/psij-python
+  documentation: https://exaworks.org/psij-python/#docs
+
+extra:
+  recipe-maintainers:
+    - xylar
+    - jan-janssen
